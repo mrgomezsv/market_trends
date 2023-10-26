@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+        <record id="trprmatr_market_trends_tr_form_view" model="ir.ui.view">
+            <field name="name">Trending Market Trends Form</field>
+            <field name="model">trprmatr.market.trends.tr</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <!--                            <field name="name" />-->
+                            <field name="product_id" />
+                            <field name="partner" />
+                            <field name="price" />
+                            <field name="date" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="trprmatr_market_trends_tr_tree_view" model="ir.ui.view">
+            <field name="name">Trending Market Trends Tree</field>
+            <field name="model">trprmatr.market.trends.tr</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id" />
+                    <field name="partner" />
+                    <field name="price" />
+                    <field name="date" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="trprmatr_market_trends_tr_chart_view" model="ir.ui.view">
+            <field name="name">Trending Market Trends Graph</field>
+            <field name="model">trprmatr.market.trends.tr</field>
+            <field name="arch" type="xml">
+                <graph string="Tendencias de Mercado">
+                    <field name="date" type="col" string="Fecha" group="month"/>
+                    <!-- Eje X (Horizontal) -->
+                    <field name="price" type="row" string="Precio"/>
+                    <!-- Eje Y (Vertical)-->
+                    <field name="partner" type="line" string="Proveedor"/>
+                    <!-- Eje Y (Vertical)-->
+                </graph>
+            </field>
+        </record>
+
+        <record id="trprmatr_market_trends_tr_action" model="ir.actions.act_window">
+            <field name="name">Tendencias de Mercado</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">trprmatr.market.trends.tr</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Define y gestiona los factores de recosteo para las órdenes de producción.
+                </p>
+            </field>
+        </record>
+
+        <record id="trprmatr_market_trends_wizard_tr_action" model="ir.actions.act_window">
+            <field name="name">Gráfico de Tendencias del Mercado</field>
+            <field name="res_model">trprmatr.market.trends.tr</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="trprmatr_market_trends_tr_menu" action="trprmatr_market_trends_tr_action" parent="purchase.purchase_report_main" sequence="100"/>
+
+        <!-- Definir el menú para acceder a la vista de árbol
+        <menuitem name="Estados de resultados por vendedor" id="trprmatr_market_trends_tr_menu_base" parent="account.menu_finance_reports" sequence="600"/>
+        <menuitem name="Overhead por vendedor" id="trprmatr_market_trends_tr_menu" parent="trprmatr_market_trends_tr_menu_base" action="trprmatr_market_trends_wizard_tr_action" sequence="10"/> -->
+
+    </data>
+</odoo>

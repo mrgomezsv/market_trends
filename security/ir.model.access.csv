@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+treming_profil_market_trends.access_trprmatr_market_trends_tr,access_trprmatr_market_trends_tr,treming_profil_market_trends.model_trprmatr_market_trends_tr,base.group_user,1,1,1,1
+trprmatr_trends_tr_user,trprmatr_trends_tr_user,model_trprmatr_trends_tr,base.group_user,1,1,1,1
