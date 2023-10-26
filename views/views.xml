@@ -26,10 +26,11 @@
                     <field name="product_id" />
                     <field name="partner" />
                     <field name="price" />
-                    <field name="date" readonly="1"/>
+                    <field name="date" />
                 </tree>
             </field>
         </record>
+
 
         <record id="trprmatr_market_trends_tr_chart_view" model="ir.ui.view">
             <field name="name">Trending Market Trends Graph</field>
@@ -66,10 +67,6 @@
         </record>
 
         <menuitem id="trprmatr_market_trends_tr_menu" action="trprmatr_market_trends_tr_action" parent="purchase.purchase_report_main" sequence="100"/>
-
-        <!-- Definir el menú para acceder a la vista de árbol
-        <menuitem name="Estados de resultados por vendedor" id="trprmatr_market_trends_tr_menu_base" parent="account.menu_finance_reports" sequence="600"/>
-        <menuitem name="Overhead por vendedor" id="trprmatr_market_trends_tr_menu" parent="trprmatr_market_trends_tr_menu_base" action="trprmatr_market_trends_wizard_tr_action" sequence="10"/> -->
 
     </data>
 </odoo>

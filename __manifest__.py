@@ -3,8 +3,8 @@
     'name': "treming_profil_market_trends",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Arega menus en Compras, asi como un modelo para registrar cotizaciones, y mostrar
+        en graficas los datos recabados""",
 
     'description': """
         Long description of module's purpose

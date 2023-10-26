@@ -5,15 +5,23 @@
             <field name="model">trprmatr.trends.tr</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button string="Generate Chart" name="action_generate_chart" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </header>
                     <group>
                         <field name="product_id" />
                         <field name="start_date" />
                         <field name="end_date" />
+
+<!--                        <field name="chart_data" widget="area" options="chart_options" readonly="1"/>-->
+
+
                     </group>
-                    <footer>
-                        <button string="Generar Gráfico" name="action_generate_chart" type="object" class="btn-primary"/>
-                        <button string="Cancelar" class="btn-secondary" special="cancel"/>
-                    </footer>
+<!--                    <footer>-->
+<!--                        <button string="Generar Gráfico" name="action_generate_chart" type="object" class="btn-primary"/>-->
+<!--                        <button string="Cancelar" class="btn-secondary" special="cancel"/>-->
+<!--                    </footer>-->
                 </form>
             </field>
         </record>
